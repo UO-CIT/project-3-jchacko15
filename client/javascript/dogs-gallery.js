@@ -16,6 +16,12 @@ let clickHandler = function() {
 
   let flickrTag = document.querySelector('input[type = "text"]').value;
   console.log(flickrTag)
+    flickrTag="";
+    for(i=0;i<flickrTag.length;i++){
+    if(flickrTag.charAt(i)!=" "){
+        flickrTag+=flickrTag.charAt(i);
+    }
+    }
   let requestURL = prefixURL + flickrTag + suffixURL;
 
   //clear old photos
