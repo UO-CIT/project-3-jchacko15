@@ -14,15 +14,15 @@ let clickHandler = function() {
   let suffixURL = '&format=json&jsoncallback=?';
   //get value entered by user from textbox
 
-  let flickrTag = document.querySelector('input[type = "text"]').value;
-  console.log(flickrTag)
-    flickrTag="";
+   flickrTag = document.querySelector('input[type = "text"]').value;
+  console.log(flickrTag);
+   newtag="";
     for(i=0;i<flickrTag.length;i++){
     if(flickrTag.charAt(i)!=" "){
-        flickrTag+=flickrTag.charAt(i);
+        newtag+=flickrTag.charAt(i);
     }
     }
-  let requestURL = prefixURL + flickrTag + suffixURL;
+  let requestURL = prefixURL + newtag + suffixURL;
 
   //clear old photos
   document.querySelector('.photos').innerHTML = '';
